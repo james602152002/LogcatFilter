@@ -1,13 +1,14 @@
 # logcat use of input() 
-logcat = input ("PlzInput: ")
+file_input = open("logcat.txt","r+")
+logcat = file_input.read()
 
 result = logcat.replace("V: │ ","")
 result = result.replace("I: │ ","")
 result = result.replace("V: └─","")
 result = result.replace("I: └─","")
 result = result.replace("─","")
-result = result.strip(" ")
-result = result.strip("\n")
+result = result.replace(" ","")
+result = result.replace("\n","")
 
 text_file = open("logcatResult.txt","w")
 text_file.write(result)
