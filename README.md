@@ -13,5 +13,5 @@ chmod +x filter.sh
 - Fourth Step: terminal
 
 ```
-filter.sh
+./filter.sh
 ```
